@@ -11,7 +11,7 @@
 
 <table class="w-full divide-y divide-gray-500 table-auto">
 
-    <thead class="bg-gray-200">
+    <thead class="bg-gray-300">
       <tr>
         <th class="px-6 py-3 text-lg font-medium text-gray-500">Title</th>
         <th class="px-6 py-3 text-lg font-medium text-gray-500">Author</th>
@@ -24,7 +24,7 @@
 
     <tbody class="divide-y divide-gray-200">
     @foreach ($portafolio as $portafolio)
-      <tr class="text-center bg-white">
+      <tr class="text-center bg-white  hover:bg-gray-200">
         <td class="text-center px-6 py-3">{{ $portafolio->titulo }}</td>
         <td class="text-center px-6 py-3">{{ $portafolio->autor->name }}</td>
         <td class="text-center px-6 py-3">{{ $portafolio->categoria->nombre }}</td>
