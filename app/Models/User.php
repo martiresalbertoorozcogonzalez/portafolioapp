@@ -47,4 +47,10 @@ class User extends Authenticatable
         return $this->hasMany(Portafolio::class);
     }
 
+    public function habilidad()
+    {
+        return $this->hasMany(Habilidad::class);
+    }
+    
+
 }

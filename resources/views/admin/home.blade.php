@@ -17,7 +17,7 @@
 
                 <div class="grid grid-rows-4 grid-cols-1 gap-4 md:grid-rows-2 md:grid-cols-2">
 
-                    <a href="#"
+                    <a href="{{ route('habilidades.index') }}"
                          class="rounded-2x backdrop-filter backdrop-blur-lg bg-opacity-20  bg-gradient-to-r from-indigo-400 p-4 flex flex-col relative undefined text-center hover:bg-indigo-300">
                          <div class="absolute right-2">
                             <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10" fill="none" viewBox="0 0 24 24" stroke="currentColor">

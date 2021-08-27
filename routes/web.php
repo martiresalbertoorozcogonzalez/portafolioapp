@@ -3,6 +3,7 @@
 use App\Models\CategoriaPortafolio;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PortafolioController;
+use App\Http\Controllers\HabilidadController;
 
 
 
@@ -19,6 +20,10 @@ Route::get('/dashboard', function () {
 })->middleware(['auth'])->name('dashboard');
 
 
+/**Rutas para las habilidades */
+Route::get('/habilidades', [HabilidadController::class, 'index'])->name('habilidades.index');
+
+
 /**Rutas para el portafolio */
 
 Route::get('/portafolio', [PortafolioController::class, 'index'])->name('portafolio.index');
@@ -33,4 +38,7 @@ Route::put('/portafolio/{portafolio}', [PortafolioController::class, 'update'])-
 
 Route::delete('/portafolio/{portafolio}', [PortafolioController::class, 'destroy'])->name('portafolio.destroy');
 
+
+
+/** Requerimiento de auth */
 require __DIR__.'/auth.php';

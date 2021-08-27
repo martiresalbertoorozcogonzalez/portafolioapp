@@ -13,6 +13,16 @@ class CreatePortafoliosTable extends Migration
      */
     public function up()
     {
+
+        Schema::create('habilidads', function (Blueprint $table) {
+            $table->id();
+            $table->string('nombre');
+            $table->string('slug');
+            $table->string('imagen')->nullable();
+            $table->text('descripcion')->nullable();
+            $table->timestamps();
+        });
+
         Schema::create('categoria_portafolios', function (Blueprint $table) {
             $table->id();
             $table->string('nombre');
@@ -29,6 +39,7 @@ class CreatePortafoliosTable extends Migration
 
             $table->foreignId('user_id')->references('id')->on('users')->comment('El usuario que crea la receta');
             $table->foreignId('categoria_id')->index('id')->on('categoria_portafolios')->comment('La categoria del portafolio');
+            $table->foreignId('habilidad_id')->constrained()->onDelete('cascade')->comment('Habilidad del usuario');
 
             $table->timestamps();
         });
@@ -41,7 +52,8 @@ class CreatePortafoliosTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('categoria_portafolios');
         Schema::dropIfExists('portafolios');
+        Schema::dropIfExists('categoria_portafolios');
+        Schema::dropIfExists('habilidads');
     }
 }

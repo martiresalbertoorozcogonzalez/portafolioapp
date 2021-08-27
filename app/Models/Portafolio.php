@@ -10,13 +10,19 @@ class Portafolio extends Model
     use HasFactory;
 
     protected $fillable = [
-        'titulo', 'imagen', 'descripcion', 'urlPortafolio', 'categoria_id',
+        'titulo', 'imagen', 'descripcion', 'urlPortafolio', 'categoria_id', 'habilidad_id'
     ];
 
-    //Obtiene la categoria de la receta via FK
+    //Obtiene la categoria del portafolio via FK
     public function categoria()
     {
         return $this->belongsTo(CategoriaPortafolio::class);
+    }
+
+    //Obtiene la habilidad del portafolio via FK
+    public function habilidad()
+    {
+        return $this->belongsTo(HabilidadPortafolio::class);
     }
 
     // Obtiene la informacion dek usuario via FK

@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\CategoriaPortafolio;
+use App\Models\Habilidad;
 use App\Models\Portafolio;
 use Illuminate\Http\Request;
 use Intervention\Image\Facades\Image;
@@ -48,8 +49,10 @@ class PortafolioController extends Controller
     public function create()
     {
         $categorias = CategoriaPortafolio::all(['id','nombre']);
+        $habilidad = Habilidad::all(['id','nombre']);
 
-        return view('admin.portafolio.create')->with('categorias',$categorias);
+        return view('admin.portafolio.create')->with('categorias',$categorias)
+                                              ->with('habilidad',$habilidad);
     }
 
     /**
@@ -66,6 +69,7 @@ class PortafolioController extends Controller
        $data = $request->validate([
             'titulo' =>  'required|min:6',
             'categoria' => 'required',
+            'habilidad' => 'required',
             'descripcion' => 'required',
             'urlPortafolio' =>'required',
             'imagen' => 'required|image',
@@ -82,6 +86,7 @@ class PortafolioController extends Controller
         auth()->user()->portafolios()->create([
             'titulo' => $data['titulo'] ,
             'categoria_id' => $data['categoria'],
+            'habilidad_id' => $data['habilidad'],
             'descripcion' => $data['descripcion'],
             'urlPortafolio' => $data['urlPortafolio'],
             'imagen' => $ruta_imagen,
@@ -112,9 +117,11 @@ class PortafolioController extends Controller
     public function edit(Portafolio $portafolio)
     {
 
+        $habilidad = Habilidad::all(['id','nombre']);
+
         $categorias = CategoriaPortafolio::all(['id','nombre']);
 
-        return view('admin.portafolio.edit',compact('categorias','portafolio'));
+        return view('admin.portafolio.edit',compact('categorias','portafolio','habilidad'));
     }
 
     /**

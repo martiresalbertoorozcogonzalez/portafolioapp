@@ -78,6 +78,31 @@
                     </div>
 
                     <div class="mb-5">
+                        <label for="habilidad" class="block text-gray-700 text-sm mb-2">
+                            Habilidad;
+                        </label>
+                        <select id="habilidad" class="block appearance-none border border-gray-200
+                                      text-gray-700 rounded leading-tight focus:outline-none
+                                      focus:bg-white focus:border-gray-500 p-3 bg-gray-100
+                                      w-full" name="habilidad">
+                            <option disabled selected> Selecciona </option>
+                            @foreach ($habilidad as $habilidad)
+                            <option {{old('habilidad') == $habilidad->id ? 'selected' : ''}}
+                                value="{{ $habilidad->id }}">
+                                {{ $habilidad->nombre }}
+                            </option>
+                            @endforeach
+                        </select>
+                        @error('habilidad')
+                        <div class="bg-red-200 border border-red-500 text-red-800 px-4 py-3 rounded relative mt-3 mb-6"
+                            role="alert">
+                            <strong class="font-bold">Error!!</strong>
+                            <span class="block">{{$message}}</span>
+                        </div>
+                        @enderror()
+                    </div>
+
+                    <div class="mb-5">
                         <label for="descripcion" class="block text-gray-700 text-sm mb-2">
                             Descripcion del Portafolio
                         </label>

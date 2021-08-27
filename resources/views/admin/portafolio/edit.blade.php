@@ -16,7 +16,7 @@
         <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
             <div class="p-6 bg-white border-b border-gray-200">
 
-                <h1 class="text-center mb-5 text-lg font-bold">Crear Portafolio</h1>
+                <h1 class="text-center mb-5 text-lg font-bold">Editar Portafolio</h1>
 
                 <form action="{{ route('portafolio.update',['portafolio'=> $portafolio->id]) }}" method="POST" enctype="multipart/form-data" class="max-w-lg mx-auto my-10">
                     @csrf
@@ -70,6 +70,30 @@
                             @endforeach
                         </select>
                         @error('categoria')
+                        <div class="bg-red-200 border border-red-500 text-red-800 px-4 py-3 rounded relative mt-3 mb-6"
+                            role="alert">
+                            <strong class="font-bold">Error!!</strong>
+                            <span class="block">{{$message}}</span>
+                        </div>
+                        @enderror()
+                    </div>
+
+                    <div class="mb-5">
+                        <label for="habilidad" class="block text-gray-700 text-sm mb-2">
+                            Habilidad;
+                        </label>
+                        <select id="habilidad" class="block appearance-none border border-gray-200
+                                      text-gray-700 rounded leading-tight focus:outline-none
+                                      focus:bg-white focus:border-gray-500 p-3 bg-gray-100
+                                      w-full" name="categoria">
+                            <option disabled selected> Selecciona </option>
+                            @foreach ($habilidad as $habilidad)
+                            <option value="{{ $habilidad->id }}" {{ $portafolio->habilidad_id == $habilidad->id ? 'selected' : '' }}>
+                                {{ $habilidad->nombre }}
+                            </option>
+                            @endforeach
+                        </select>
+                        @error('habilidad')
                         <div class="bg-red-200 border border-red-500 text-red-800 px-4 py-3 rounded relative mt-3 mb-6"
                             role="alert">
                             <strong class="font-bold">Error!!</strong>
