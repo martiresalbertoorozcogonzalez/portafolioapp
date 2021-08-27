@@ -20,7 +20,7 @@
 
 
     </head>
-    <body class="font-sans antialiased ">
+    <body class="font-sans antialiased bg-gradient-to-r from-blue-400">
         <div class="min-h-screen">
             @include('layouts.navigation')
 
