@@ -39,6 +39,14 @@ class CreatePortafoliosTable extends Migration
             $table->timestamps();
         });
 
+        Schema::create('certificacions', function (Blueprint $table) {
+            $table->id();
+            $table->string('nombre');
+            $table->string('imagen')->nullable();
+            $table->text('descripcion')->nullable();
+            $table->timestamps();
+        });
+
         Schema::create('portafolios', function (Blueprint $table) {
             $table->id();
             $table->string('titulo');
@@ -62,6 +70,8 @@ class CreatePortafoliosTable extends Migration
     {
         Schema::dropIfExists('portafolios');
         Schema::dropIfExists('categoria_portafolios');
+        Schema::dropIfExists('acercas');
         Schema::dropIfExists('habilidads');
+        Schema::dropIfExists('certificacions');
     }
 }

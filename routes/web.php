@@ -5,6 +5,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PortafolioController;
 use App\Http\Controllers\HabilidadController;
 use App\Http\Controllers\AcercaController;
+use App\Http\Controllers\CertificacionController;
 
 
 
@@ -48,6 +49,20 @@ Route::get('/acerca/{acerca}/edit', [AcercaController::class, 'edit'])->name('ac
 Route::put('/acerca/{acerca}', [AcercaController::class, 'update'])->name('acerca.update');
 
 Route::delete('/acerca/{acerca}', [AcercaController::class, 'destroy'])->name('acerca.destroy');
+
+/**Rutas para Certificaciones*/
+
+Route::get('/certificacion', [CertificacionController::class, 'index'])->name('certificacion.index');
+
+Route::get('/certificacion/create', [CertificacionController::class, 'create'])->name('certificacion.create');
+
+Route::post('/certificacion', [CertificacionController::class, 'store'])->name('certificacion.store');
+
+Route::get('/certificacion/{certificacion}/edit', [CertificacionController::class, 'edit'])->name('certificacion.edit');
+
+Route::put('/certificacion/{certificacion}', [CertificacionController::class, 'update'])->name('certificacion.update');
+
+Route::delete('/certificacion/{certificacion}', [CertificacionController::class, 'destroy'])->name('certificacion.destroy');
 
 /**Rutas para el portafolio */
 
