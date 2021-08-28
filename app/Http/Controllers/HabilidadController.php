@@ -4,6 +4,9 @@ namespace App\Http\Controllers;
 
 use App\Models\Habilidad;
 use Illuminate\Http\Request;
+use Intervention\Image\Facades\Image;
+use Illuminate\Support\Str;
+
 
 class HabilidadController extends Controller
 {
@@ -20,7 +23,7 @@ class HabilidadController extends Controller
      */
     public function index()
     {
-        
+
         $usuario = auth()->user();
 
         //Habilidades con paginacion
@@ -41,7 +44,8 @@ class HabilidadController extends Controller
      */
     public function create()
     {
-        //
+
+        return view('admin.habilidades.create');
     }
 
     /**
@@ -52,7 +56,32 @@ class HabilidadController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        // return $request->all();
+
+       //validacion
+       $data = $request->validate([
+        'nombre' =>  'required',
+        'descripcion' => 'required',
+        'imagen' => 'required|image',
+    ]);
+
+     //Obtener la ruta de la imagen
+     $ruta_imagen = $request['imagen']->store('habilidad','public');
+
+     //Resize de la imagen
+     $img = Image::make(public_path("storage/{$ruta_imagen}"))->fit(1220,550);
+     $img->save();
+
+             //Almacenar en la DB con modelo
+    Habilidad::create([
+        'nombre' => $data['nombre'] ,
+        'descripcion' => $data['descripcion'],
+        'imagen' => $ruta_imagen,
+    ]);
+
+
+    return redirect()->route('habilidad.index');
+
     }
 
     /**
@@ -74,7 +103,7 @@ class HabilidadController extends Controller
      */
     public function edit(Habilidad $habilidad)
     {
-        //
+        return view('admin.habilidades.edit',compact('habilidad'));
     }
 
     /**
@@ -86,7 +115,42 @@ class HabilidadController extends Controller
      */
     public function update(Request $request, Habilidad $habilidad)
     {
-        //
+
+        //  //Revisar el policy
+        //  $this->authorize('update', $habilidad);
+
+         //validacion
+         $data = $request->validate([
+            'nombre' =>  'required',
+            'descripcion' => 'required',
+            'imagen' =>'required|image',
+            ]);
+
+
+            //Asiganr los valores
+            $habilidad->nombre = $data['nombre'];
+            $habilidad->descripcion = $data['descripcion'];
+
+            // Si el usuario sube un anueva imagen
+            if (request('imagen')) {
+
+            //Obtener la ruta de la imagen
+            $ruta_imagen = $request['imagen']->store('habilidad','public');
+
+            //Resize de la imagen
+            $img = Image::make(public_path("storage/{$ruta_imagen}"))->fit(1220,550);
+
+            $img->save();
+
+            //Asiganr al objeto
+            $habilidad->imagen = $ruta_imagen;
+        }
+
+            $habilidad->save();
+
+            //redireccionar
+            return redirect()->route('habilidad.index');
+
     }
 
     /**
@@ -97,6 +161,12 @@ class HabilidadController extends Controller
      */
     public function destroy(Habilidad $habilidad)
     {
-        //
+        // //Ejecutar el Policy
+        // $this->authorize('delete',$habilidad);
+
+        //Eliminar el portafolio
+        $habilidad->delete();
+
+        return redirect()->route('habilidad.index');
     }
 }

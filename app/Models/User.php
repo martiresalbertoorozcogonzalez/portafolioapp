@@ -51,6 +51,6 @@ class User extends Authenticatable
     {
         return $this->hasMany(Habilidad::class);
     }
-    
+
 
 }

@@ -8,10 +8,9 @@ use Illuminate\Database\Eloquent\Model;
 class Habilidad extends Model
 {
     use HasFactory;
-     
-    // Obtiene la informacion dek usuario via FK
-     public function user()
-     {
-         return $this->belongsTo(User::class, 'user_id'); //FK de esta tabla
-     }
+
+    protected $fillable = [
+        'nombre', 'imagen', 'descripcion'
+    ];
+
 }

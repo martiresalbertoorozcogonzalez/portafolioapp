@@ -4,6 +4,8 @@
 
 <div class="container px-4 mx-auto mt-6">
 
+    <h1 class="text-2xl text-center text-black font-bold">Portafolio</h1>
+
     <a href="{{ route('portafolio.create') }}" class="bg-gradient-to-l from-red-600  hover:bg-indigo-700 p-2 mb-2 rounded" type="submit">Crear Portafolio</a>
 
 <div class="bg-white overflow-hidden shadow-xl sm:rounded-lg">

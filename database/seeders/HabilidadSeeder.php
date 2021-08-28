@@ -18,7 +18,6 @@ class HabilidadSeeder extends Seeder
     {
         DB::table('habilidads')->insert([
             'nombre' => 'HTML5',
-            'slug' => Str::slug('HTML5'),
             'descripcion' => 'Descripcion de ejemplo de la habilidad',
             'imagen' => 'default.jpg',
             'created_at' => Carbon::now(),

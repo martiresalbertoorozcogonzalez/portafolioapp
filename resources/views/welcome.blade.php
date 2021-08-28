@@ -84,7 +84,7 @@
                         <path style="opacity:1" fill="#af96de" d="M 380.5,286.5 C 380.082,287.222 379.416,287.722 378.5,288C 379.624,288.249 380.624,288.749 381.5,289.5C 381.376,290.107 381.043,290.44 380.5,290.5C 379.791,289.596 378.791,289.263 377.5,289.5C 377.5,288.5 377.5,287.5 377.5,286.5C 378.5,286.5 379.5,286.5 380.5,286.5 Z"/><
                         <path style="opacity:1" fill="#8159cb" d="M 387.5,286.5 C 389.337,286.639 389.67,287.306 388.5,288.5C 387.702,288.043 387.369,287.376 387.5,286.5 Z"/></g>
                     </svg>
-                    Martires Alberto Orozco
+                    Portafolio Web
                   </a>
                 </div>
 
@@ -404,7 +404,7 @@
                       </div>
                       <div class="w-full sm:w-1/2 p-6">
 
-                        <img src="img/me.jpg" class="rounded-full" alt="Imagen Portafolio">
+                        <img src="img/default.png" class="rounded-full" width="350" height="350" alt="Imagen Portafolio">
 
 
                       </div>
@@ -890,9 +890,9 @@
                 <div class="w-full flex flex-col md:flex-row py-6">
                   <div class="flex-1 mb-6 text-black text-center">
                     <a class="text-indigo-900 no-underline hover:no-underline font-bold text-2xl lg:text-4xl" href="#">
-                      Portafolio Martires Alberto Orozco
+                      Portafolio Web
                     </a>
-                    <p class="text-black">Copyright &copy; Portafolio | Martires 2021 <a href="" target="_blank" rel="nofollow"></a></p>
+                    <p class="text-black">Copyright &copy; Portafolio | Web 2021 <a href="" target="_blank" rel="nofollow"></a></p>
                   </div>
                 </div>
               </div>

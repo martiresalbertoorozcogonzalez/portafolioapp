@@ -69,7 +69,6 @@ class PortafolioController extends Controller
        $data = $request->validate([
             'titulo' =>  'required|min:6',
             'categoria' => 'required',
-            'habilidad' => 'required',
             'descripcion' => 'required',
             'urlPortafolio' =>'required',
             'imagen' => 'required|image',
@@ -86,7 +85,6 @@ class PortafolioController extends Controller
         auth()->user()->portafolios()->create([
             'titulo' => $data['titulo'] ,
             'categoria_id' => $data['categoria'],
-            'habilidad_id' => $data['habilidad'],
             'descripcion' => $data['descripcion'],
             'urlPortafolio' => $data['urlPortafolio'],
             'imagen' => $ruta_imagen,
