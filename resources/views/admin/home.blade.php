@@ -31,7 +31,7 @@
                         </div>
                     </a>
 
-                    <a href="#"
+                    <a href="{{ route('acerca.index') }}"
                          class="rounded-2x backdrop-filter backdrop-blur-lg bg-opacity-20  bg-gradient-to-r from-indigo-400 p-4 flex flex-col relative undefined text-center hover:bg-indigo-300">
                         <div class="absolute right-2">
                             <svg xmlns="http://www.w3.org/2000/svg" class="w-10 h-10" viewBox="0 0 20 20" fill="currentColor">

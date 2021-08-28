@@ -21,6 +21,16 @@ class CreatePortafoliosTable extends Migration
             $table->timestamps();
         });
 
+        Schema::create('acercas', function (Blueprint $table) {
+            $table->id();
+            $table->string('nombre');
+            $table->string('url_git');
+            $table->string('url_linkedin');
+            $table->string('imagen')->nullable();
+            $table->text('descripcion')->nullable();
+            $table->timestamps();
+        });
+
         Schema::create('habilidads', function (Blueprint $table) {
             $table->id();
             $table->string('nombre');

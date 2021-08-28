@@ -4,6 +4,7 @@ use App\Models\CategoriaPortafolio;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PortafolioController;
 use App\Http\Controllers\HabilidadController;
+use App\Http\Controllers\AcercaController;
 
 
 
@@ -21,6 +22,7 @@ Route::get('/dashboard', function () {
 
 
 /**Rutas para las habilidades */
+
 Route::get('/habilidad', [HabilidadController::class, 'index'])->name('habilidad.index');
 
 Route::get('/habilidad/create', [HabilidadController::class, 'create'])->name('habilidad.create');
@@ -33,6 +35,19 @@ Route::put('/habilidad/{habilidad}', [HabilidadController::class, 'update'])->na
 
 Route::delete('/habilidad/{habilidad}', [HabilidadController::class, 'destroy'])->name('habilidad.destroy');
 
+/**Rutas para Acerca de mi */
+
+Route::get('/acerca', [AcercaController::class, 'index'])->name('acerca.index');
+
+Route::get('/acerca/create', [AcercaController::class, 'create'])->name('acerca.create');
+
+Route::post('/acerca', [AcercaController::class, 'store'])->name('acerca.store');
+
+Route::get('/acerca/{acerca}/edit', [AcercaController::class, 'edit'])->name('acerca.edit');
+
+Route::put('/acerca/{acerca}', [AcercaController::class, 'update'])->name('acerca.update');
+
+Route::delete('/acerca/{acerca}', [AcercaController::class, 'destroy'])->name('acerca.destroy');
 
 /**Rutas para el portafolio */
 
