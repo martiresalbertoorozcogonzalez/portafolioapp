@@ -6,6 +6,7 @@ use App\Http\Controllers\PortafolioController;
 use App\Http\Controllers\HabilidadController;
 use App\Http\Controllers\AcercaController;
 use App\Http\Controllers\CertificacionController;
+use App\Http\Controllers\MensajeController;
 
 
 
@@ -78,7 +79,8 @@ Route::put('/portafolio/{portafolio}', [PortafolioController::class, 'update'])-
 
 Route::delete('/portafolio/{portafolio}', [PortafolioController::class, 'destroy'])->name('portafolio.destroy');
 
-
+// Mensajes
+Route::get('/mensaje', [MensajeController::class, 'index'])->name('mensaje.index');
 
 /** Requerimiento de auth */
 require __DIR__.'/auth.php';
