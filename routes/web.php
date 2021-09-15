@@ -7,13 +7,11 @@ use App\Http\Controllers\HabilidadController;
 use App\Http\Controllers\AcercaController;
 use App\Http\Controllers\CertificacionController;
 use App\Http\Controllers\MensajeController;
-
+use App\Http\Controllers\WelcomeController;
 
 
 /* Ruta para la pagina de inicio  */
-Route::get('/', function () {
-    return view('welcome');
-})->name('home');
+Route::get('/', [WelcomeController::class, '__invoke'])->name('welcome');;
 
 /**Ruta oara el home de admin */
 
@@ -80,7 +78,26 @@ Route::put('/portafolio/{portafolio}', [PortafolioController::class, 'update'])-
 Route::delete('/portafolio/{portafolio}', [PortafolioController::class, 'destroy'])->name('portafolio.destroy');
 
 // Mensajes
+
 Route::get('/mensaje', [MensajeController::class, 'index'])->name('mensaje.index');
 
-/** Requerimiento de auth */
+Route::post('message', function(){
+
+    // enviar un correo
+        $data = request()->all();
+        Mail::send('admin.mail.message',$data, function($message) use ($data){
+        $message->from($data['email'],$data['name'])
+                ->to('martiresalbertoorozcogonzalez@gmail.com','Alberto')
+                ->subject($data['subject']);
+        });
+
+        // responderal usuario
+        return back()->with('flash', $data['name'] . ',Tu mensaje a sido recibido');
+
+      })->name('messages');
+
+
+
+      /** Requerimiento de auth */
+
 require __DIR__.'/auth.php';
