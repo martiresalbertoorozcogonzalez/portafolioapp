@@ -71,7 +71,7 @@
                            <p class="text-xl">
                                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Optio, voluptatem.
                            </p>
-                           <a href="#" class="xl:text-2xl my-4 inline-block py-2 px-16 bg-red-500 text-white font-black border-transparent border-8 rounded-3xl hover:border-gray-200 hover:bg-white hover:text-black transition duration-200 group">
+                           <a href="#" class="boton">
                                Watch the trailer
                                <span class="w-4 h-4 inline-block border-yellow-300 border-solid border-t-4 border-r-4 transition-all transform rotate-45 group-hover:border-red-500 xl:group-hover:ml-4"></span>
                            </a> 

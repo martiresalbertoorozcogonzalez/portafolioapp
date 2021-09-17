@@ -10,13 +10,13 @@ use App\Http\Controllers\MensajeController;
 use App\Http\Controllers\WelcomeController;
 
 
-// /* Ruta para la pagina de inicio  */
-// Route::get('/', function () {
-//     return view('welcome');
-// })->name('home');
+/* Ruta para la pagina de inicio  */
+Route::get('/', function () {
+    return view('inicio');
+})->name('home');
 
 /* Ruta para la pagina de inicio  */
-Route::get('/', [WelcomeController::class, '__invoke'])->name('welcome');;
+Route::get('/playmario', [WelcomeController::class, '__invoke'])->name('welcome');;
 
 /**Ruta oara el home de admin */
 
