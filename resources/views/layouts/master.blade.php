@@ -14,9 +14,10 @@
         <link rel="stylesheet" href="{{ asset('css/app.css') }}">
 
     </head>
-    <body>
+<body>
 
     <div class="w-1900 xsm:w-full mx-auto">
+        
         <nav class="bg-gray-800 flex justify-between lg:justify-start items-center">
             <div class="logo p-2 w-1/6">
                 <img src="img/star.png" width="50" alt="">

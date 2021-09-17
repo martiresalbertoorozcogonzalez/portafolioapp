@@ -17,7 +17,7 @@ class WelcomeController extends Controller
 
         if (view()->exists('welcome')) {
             # code...
-            return view('layouts.master');
+            return view('inicio');
         }
 
     }

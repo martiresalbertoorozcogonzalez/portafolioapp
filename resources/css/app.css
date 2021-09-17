@@ -3,18 +3,8 @@
 @import 'tailwindcss/utilities';
 
 
-.link{
-    @apply text-white block p-5 font-bold hover:text-yellow-500
+
+.bg-card{
+    @apply absolute z-0 inset-0 bg-gradient-to-r from-cyan-400 to-emerald-400 shadow-md transform -skew-y-6 sm:skew-y-0 sm:-rotate-6 rounded-md
 }
 
-.dot{
-    @apply h-3 w-3 bg-blue-600 rounded-full
-}
-
-.boton{
-    @apply xl:text-2xl my-4 inline-block py-2 px-16 bg-red-500 text-white font-black border-transparent border-8 rounded-3xl hover:border-gray-200 hover:bg-white hover:text-black transition duration-200
-}
-
-.arrow{
-    @apply w-4 h-4 inline-block border-yellow-300 border-solid border-t-4 border-r-4 transition-all transform rotate-45
-}
