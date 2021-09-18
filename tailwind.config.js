@@ -12,7 +12,10 @@ module.exports = {
         extend: {
             colors : {
                 'cyan':colors.cyan,
-                'emerald':colors.emerald
+                'emerald':colors.emerald,
+                'indigo':colors.indigo,
+                'violet':colors.violet,
+                'rose':colors.rose
             },
             fontFamily: {
                 sans: ['Nunito', ...defaultTheme.fontFamily.sans],

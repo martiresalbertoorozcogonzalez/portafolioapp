@@ -5,7 +5,7 @@
 
 
 .bg-card{
-    @apply absolute z-0 inset-0 bg-gradient-to-r from-cyan-400 to-emerald-400 shadow-md transform -skew-y-6 sm:skew-y-0 sm:-rotate-6 rounded-md
+    @apply absolute z-0 inset-0 bg-gradient-to-r from-rose-600 to-rose-300 shadow-md transform -skew-y-6 sm:skew-y-0 sm:-rotate-6 rounded-md
 }
 
 .link{

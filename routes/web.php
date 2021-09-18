@@ -8,12 +8,15 @@ use App\Http\Controllers\AcercaController;
 use App\Http\Controllers\CertificacionController;
 use App\Http\Controllers\MensajeController;
 use App\Http\Controllers\WelcomeController;
+use App\Http\Controllers\FrontController;
 
 
 /* Ruta para la pagina de inicio  */
-Route::get('/', function () {
-    return view('inicio');
-})->name('home');
+Route::get('/', [FrontController::class, 'acerca'])->name('front.index');
+
+// Route::get('/', function () {
+//     return view('inicio');
+// })->name('home');
 
 /* Ruta para la pagina de inicio  */
 Route::get('/playmario', [WelcomeController::class, '__invoke'])->name('welcome');;

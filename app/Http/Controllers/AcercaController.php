@@ -64,8 +64,8 @@ class AcercaController extends Controller
         //Obtener la ruta de la imagen
         $ruta_imagen = $request['imagen']->store('habilidad', 'public');
 
-        //Resize de la imagen
-        $img = Image::make(public_path("storage/{$ruta_imagen}"))->fit(1220, 550);
+        //Redimensionar de la imagen
+        $img = Image::make(public_path("storage/{$ruta_imagen}"))->fit(1250, 850);
         $img->save();
 
         //Almacenar en la DB con modelo
@@ -138,7 +138,7 @@ class AcercaController extends Controller
             $ruta_imagen = $request['imagen']->store('acerca', 'public');
 
             //Resize de la imagen
-            $img = Image::make(public_path("storage/{$ruta_imagen}"))->fit(1220, 550);
+            $img = Image::make(public_path("storage/{$ruta_imagen}"))->fit(1250, 850);
 
             $img->save();
 
