@@ -78,6 +78,30 @@
     </div>
 </section>  
 
+<!-- Seccion para certificaciones -->
+<section class="bg-gray-50 pt-20 pb-20 px-8">
+  <div class="max-w-5xl mx-auto">
+      <div class="text-center">
+        <h2 class="text-6xl text-gray-800 font-bold">Certificaciones</h2>
+        <p class="pt-2">Lorem ipsum dolor sit amet consectetur.</p>
+      </div> 
+   </div>
+   <div class="mt-16 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-16">
+
+   @foreach($certificacion as $certificacion)
+     <div class="relative">
+       <div class="bg-card"></div>     
+       <div class="relative bg-white p-12 rounded-md shadow-md">
+        <img src="/storage/{{$certificacion->imagen}}" class="w-8 h-8" alt="">   
+        <h3 class="mt-3 text-2xl font-bold">{{ $certificacion->nombre }}</h3>
+        <p class="mt-4">{!! $certificacion->descripcion !!}</p>
+       </div>
+     </div>
+   @endforeach
+     
+   </div>
+</section> 
+
 <!-- Seccion de Portafolio -->
 <section class="pt-20 pb-20 px-8 min-h-screen">
    <div class="max-w-5xl mx-auto">
@@ -152,5 +176,44 @@
        </div> 
     </div>
 </section> 
+
+<!-- Seccion de contacto -->
+<section class="pt-20 pb-36 px-8 bg-gray-50">
+  <div class="max-w-6xl mx-auto">
+    <div class="text-center">
+        <h1 class="text-6xl font-bold text-gray-800">Contactame</h1>
+        <p class="pt-2">Get in touch with me</p>
+    </div>
+  </div>
+  <div class="mt-16 relative max-w-4xl mx-auto">
+    <div
+        class="absolute z-10 inset-0 bg-gradient-to-r from-cyan-400 to-emerald-400 shadow-lg transform -skew-y-6 sm:skew-y-0 sm:-rotate-6 sm:rounded-lg"
+    ></div>
+    <div class="relative z-20 bg-white rounded-md shadow-md p-12">
+
+        <form action="{{ route('mensaje') }}" method="POST">
+        @csrf
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-6">
+                <input type="text" placeholder="Name" name="name" value="{{ old('name') }}" class="border border-gray-200 outline-none px-4 py-2 rounded-md hover:border-gray-400 focus:border-gray-400"/>
+                {!! $errors->first('name', '<small class="text-red-500 font-bold">:message</small>')!!}
+
+                <input type="text" placeholder="Email" name="email" value="{{ old('email') }}" class="border border-gray-200 outline-none px-4 py-2 rounded-md hover:border-gray-400 focus:border-gray-400"/>
+                {!! $errors->first('email', '<small class="text-red-500 font-bold">:message</small>')!!}
+
+                <input type="text" name="subject" placeholder="Subject" value="{{ old('subject') }}" class="border border-gray-200 outline-none px-4 py-2 rounded-md hover:border-gray-400 focus:border-gray-400 md:col-span-2"/>
+                {!! $errors->first('subject', '<small class="text-red-500 font-bold">:message</small>')!!}
+
+                <textarea rows="5" name="content" placeholder="Message" value="{{ old('content') }}" class="border border-gray-200 outline-none px-4 py-2 rounded-md hover:border-gray-400 focus:border-gray-400 md:col-span-2"></textarea>
+                {!! $errors->first('content', '<small class="text-red-500 font-bold">:message</small>')!!}
+                           
+            </div>
+            <button class="inline-block w-auto mt-4 px-6 py-2 bg-gradient-to-r from-cyan-400 to-emerald-400 rounded-md shadow-md text-sm font-bold text-white">
+                  Enviar mensaje
+            </button>
+        </form>
+    </div>
+  </div>
+</section>
 
 @endsection

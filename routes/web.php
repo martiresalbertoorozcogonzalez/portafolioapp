@@ -87,24 +87,7 @@ Route::delete('/portafolio/{portafolio}', [PortafolioController::class, 'destroy
 
 // Mensajes
 
-Route::get('/mensaje', [MensajeController::class, 'index'])->name('mensaje.index');
-
-Route::post('message', function(){
-
-    // enviar un correo
-        $data = request()->all();
-        Mail::send('admin.mail.message',$data, function($message) use ($data){
-        $message->from($data['email'],$data['name'])
-                ->to('martiresalbertoorozcogonzalez@gmail.com','Alberto')
-                ->subject($data['subject']);
-        });
-
-        // responderal usuario
-        return back()->with('flash', $data['name'] . ',Tu mensaje a sido recibido');
-
-      })->name('messages');
-
-
+Route::post('mensaje',[MensajeController::class, 'store'])->name('mensaje');
 
       /** Requerimiento de auth */
 

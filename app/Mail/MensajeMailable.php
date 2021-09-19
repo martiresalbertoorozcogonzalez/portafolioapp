@@ -11,16 +11,18 @@ class MensajeMailable extends Mailable
 {
     use Queueable, SerializesModels;
 
-    public $subjet = "Informacion de contacto";
+    public $subject = 'Mensaje recibido';
+
+    public $msg;
 
     /**
      * Create a new message instance.
      *
      * @return void
      */
-    public function __construct()
+    public function __construct($msg)
     {
-        //
+         $this->msg = $msg;
     }
 
     /**
