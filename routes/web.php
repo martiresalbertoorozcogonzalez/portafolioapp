@@ -14,11 +14,12 @@ use App\Http\Controllers\FrontController;
 /* Ruta para la pagina de inicio  */
 Route::get('/', [FrontController::class, 'acerca'])->name('front.index');
 
+
 // Route::get('/', function () {
 //     return view('inicio');
 // })->name('home');
 
-/* Ruta para la pagina de inicio  */
+/* Ruta para la pagina de inicio de Mariobros */
 Route::get('/playmario', [WelcomeController::class, '__invoke'])->name('welcome');;
 
 /**Ruta oara el home de admin */

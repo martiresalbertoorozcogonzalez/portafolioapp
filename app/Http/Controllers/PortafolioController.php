@@ -91,7 +91,7 @@ class PortafolioController extends Controller
         ]);
 
 
-        return redirect()->route('portafolio.index');
+        return redirect()->route('portafolio.index')->with('estado','El portafolio a sido creado');
 
     }
 
@@ -168,7 +168,7 @@ class PortafolioController extends Controller
         $portafolio->save();
 
         //redireccionar
-        return redirect()->route('portafolio.index');
+        return redirect()->route('portafolio.index')->with('estado','El portafolio a sido editado');
 
 
     }
@@ -187,6 +187,6 @@ class PortafolioController extends Controller
         //Eliminar el portafolio
         $portafolio->delete();
 
-        return redirect()->route('portafolio.index');
+        return redirect()->route('portafolio.index')->with('estado','El portafolio a sido eliminado correctamente');
     }
 }

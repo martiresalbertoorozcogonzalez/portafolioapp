@@ -18,29 +18,28 @@
                 
                 <div>
                     <p class="text-lg">Hola yo soy</p>
-                    <h1 class="text-xl font-bold text-gray-800">{{ $acerca->nombre }}</h1>
+                    <h1 class="text-5xl font-bold text-gray-800">{{ $acerca->nombre }}</h1>
                 </div>
                 <p class="text-lg leading-relaxed">
                     {!! $acerca->descripcion !!}
                 </p>
-                <div class="inline-flex spacex4 text-xl">
+                <div class="inline-flex spacex4 text-5xl text-gray-600">
                 <ion-icon name="logo-github"></ion-icon>
                 <ion-icon name="logo-linkedin"></ion-icon>
                 </div>
 
             </div>
-            <img src="/storage/{{$acerca->imagen}}" alt="" class="w-80 rounded-full border-6 border-white shadow-md flex-shrink-0">
+            <img src="/storage/{{$acerca->imagen}}" alt="" class="w-80 rounded-full border-6 border-blue-300 shadow-md flex-shrink-0">
             @endforeach 
         </div>
     </div>
 </section>
 
-
 <!-- Seccion de servicios -->
 <section class="bg-gray-50 pt-20 pb-20 px-8">
    <div class="max-w-5xl mx-auto">
        <div class="text-center">
-         <h2 class="text-6xl text-gray-800 font-bold">Conocimientos</h2>
+         <h2 class="text-5xl text-gray-800 font-bold">Conocimientos</h2>
          <p class="pt-2">Lorem ipsum dolor sit amet consectetur.</p>
        </div> 
     </div>
@@ -51,7 +50,7 @@
         <div class="bg-card"></div>     
         <div class="relative bg-white p-12 rounded-md shadow-md">
          <img src="/storage/{{$habilidad->imagen}}" class="w-8 h-8" alt="">   
-         <h3 class="mt-3 text-2xl font-bold">{{ $habilidad->nombre }}</h3>
+         <h3 class="mt-3 text-2xl font-bold text-gray-800">{{ $habilidad->nombre }}</h3>
          <p class="mt-4">{!! $habilidad->descripcion !!}</p>
         </div>
       </div>
@@ -82,7 +81,7 @@
 <section class="bg-gray-50 pt-20 pb-20 px-8">
   <div class="max-w-5xl mx-auto">
       <div class="text-center">
-        <h2 class="text-6xl text-gray-800 font-bold">Certificaciones</h2>
+        <h2 class="text-5xl text-gray-800 font-bold">Certificaciones</h2>
         <p class="pt-2">Lorem ipsum dolor sit amet consectetur.</p>
       </div> 
    </div>
@@ -93,7 +92,7 @@
        <div class="bg-card"></div>     
        <div class="relative bg-white p-12 rounded-md shadow-md">
         <img src="/storage/{{$certificacion->imagen}}" class="w-8 h-8" alt="">   
-        <h3 class="mt-3 text-2xl font-bold">{{ $certificacion->nombre }}</h3>
+        <h3 class="mt-3 text-2xl font-bold text-gray-800">{{ $certificacion->nombre }}</h3>
         <p class="mt-4">{!! $certificacion->descripcion !!}</p>
        </div>
      </div>
@@ -114,13 +113,13 @@
           @foreach($portafoliouno as $uno)
 
             <div class="rounded-md shadow-md lg:col-span-2">
-              <img src="/storage/{{$uno->imagen}}" class="h-50 w-full object-cover" alt="">
+              <img src="/storage/{{$uno->imagen}}" class="bg-blue-300 h-50 w-full object-cover p-3" alt="">
               <div class="p-8">
-                <h4 class="font-bold text-2xl">{{ $uno->titulo }}</h4>
+                <h4 class="font-bold text-2xl text-gray-800">{{ $uno->titulo }}</h4>
                 <p class="pt-3">
                   {!! $uno->descripcion !!}
                 </p>
-                <a href="#" class="inline-block mt-4 bg-gradient-to-r from-cyan-400 to-emerald-400 font-bold text-white text-sm px-6 py-2 rounded-md shadow-md">
+                <a href="#" class="boton-portafolio">
                   Ver mas
                 </a>
               </div>
@@ -130,13 +129,13 @@
           
           @foreach($portafoliodos as $dos)
             <div class="rounded-md shadow-md">
-              <img src="/storage/{{$uno->imagen}}" class="h-50 w-full object-cover" alt="">
+              <img src="/storage/{{$uno->imagen}}" class="bg-blue-300 p-3 h-50 w-full object-cover" alt="">
               <div class="p-8">
-                <h4 class="font-bold text-2xl">{{ $dos->titulo}}</h4>
+                <h4 class="font-bold text-2xl text-gray-800">{{ $dos->titulo}}</h4>
                 <p class="pt-3">
                   {!! $dos->descripcion !!}
                 </p>
-                <a href="#" class="inline-block mt-4 bg-gradient-to-r from-cyan-400 to-emerald-400 font-bold text-white text-sm px-6 py-2 rounded-md shadow-md">
+                <a href="#" class="boton-portafolio">
                   Ver mas
                 </a>
               </div>
@@ -145,13 +144,13 @@
 
           @foreach($portafoliotres as $tres)
             <div class="rounded-md shadow-md">
-              <img src="/storage/{{$uno->imagen}}" class="h-50 w-full object-cover" alt="">
+              <img src="/storage/{{$uno->imagen}}" class="bg-blue-300 p-3 h-50 w-full object-cover" alt="">
               <div class="p-8">
-                <h4 class="font-bold text-2xl">{{ $tres->titulo }}</h4>
+                <h4 class="font-bold text-2xl text-gray-800">{{ $tres->titulo }}</h4>
                 <p class="pt-3">
                   {!! $tres->descripcion !!}
                 </p>
-                <a href="#" class="inline-block mt-4 bg-gradient-to-r from-cyan-400 to-emerald-400 font-bold text-white text-sm px-6 py-2 rounded-md shadow-md">
+                <a href="#" class="boton-portafolio">
                   Ver mas
                 </a>
               </div>
@@ -160,13 +159,13 @@
 
           @foreach($portafoliocuatro as $cuatro)
             <div class="rounded-md shadow-md lg:col-span-2">
-              <img src="/storage/{{$uno->imagen}}" class="h-50 w-full object-cover" alt="">
+              <img src="/storage/{{$uno->imagen}}" class="bg-blue-300 p-3 h-50 w-full object-cover" alt="">
               <div class="p-8">
-                <h4 class="font-bold text-2xl">{{ $cuatro->titulo }}</h4>
+                <h4 class="font-bold text-2xl text-gray-800">{{ $cuatro->titulo }}</h4>
                 <p class="pt-3">
                   {!! $cuatro->descripcion !!}
                 </p>
-                <a href="#" class="inline-block mt-4 bg-gradient-to-r from-cyan-400 to-emerald-400 font-bold text-white text-sm px-6 py-2 rounded-md shadow-md">
+                <a href="#" class="boton-portafolio">
                   Ver mas
                 </a>
               </div>
@@ -181,14 +180,12 @@
 <section class="pt-20 pb-36 px-8 bg-gray-50">
   <div class="max-w-6xl mx-auto">
     <div class="text-center">
-        <h1 class="text-6xl font-bold text-gray-800">Contactame</h1>
+        <h1 class="text-5xl font-bold text-gray-800">Contactame</h1>
         <p class="pt-2">Get in touch with me</p>
     </div>
   </div>
   <div class="mt-16 relative max-w-4xl mx-auto">
-    <div
-        class="absolute z-10 inset-0 bg-gradient-to-r from-cyan-400 to-emerald-400 shadow-lg transform -skew-y-6 sm:skew-y-0 sm:-rotate-6 sm:rounded-lg"
-    ></div>
+    <div class="absolute z-10 inset-0 bg-gradient-to-r from-blue-400 to-blue-400 shadow-lg transform -skew-y-6 sm:skew-y-0 sm:-rotate-6 sm:rounded-lg"></div>
     <div class="relative z-20 bg-white rounded-md shadow-md p-12">
 
         <form action="{{ route('mensaje') }}" method="POST">
@@ -196,19 +193,19 @@
 
             <div class="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-6">
                 <input type="text" placeholder="Name" name="name" value="{{ old('name') }}" class="border border-gray-200 outline-none px-4 py-2 rounded-md hover:border-gray-400 focus:border-gray-400"/>
-                {!! $errors->first('name', '<small class="text-red-500 font-bold">:message</small>')!!}
+                {!! $errors->first('name', '<small class=" font-bold">:message</small>')!!}
 
                 <input type="text" placeholder="Email" name="email" value="{{ old('email') }}" class="border border-gray-200 outline-none px-4 py-2 rounded-md hover:border-gray-400 focus:border-gray-400"/>
-                {!! $errors->first('email', '<small class="text-red-500 font-bold">:message</small>')!!}
+                {!! $errors->first('email', '<small class=" font-bold">:message</small>')!!}
 
                 <input type="text" name="subject" placeholder="Subject" value="{{ old('subject') }}" class="border border-gray-200 outline-none px-4 py-2 rounded-md hover:border-gray-400 focus:border-gray-400 md:col-span-2"/>
-                {!! $errors->first('subject', '<small class="text-red-500 font-bold">:message</small>')!!}
+                {!! $errors->first('subject', '<small class=" font-bold">:message</small>')!!}
 
                 <textarea rows="5" name="content" placeholder="Message" value="{{ old('content') }}" class="border border-gray-200 outline-none px-4 py-2 rounded-md hover:border-gray-400 focus:border-gray-400 md:col-span-2"></textarea>
-                {!! $errors->first('content', '<small class="text-red-500 font-bold">:message</small>')!!}
+                {!! $errors->first('content', '<small class=" font-bold">:message</small>')!!}
                            
             </div>
-            <button class="inline-block w-auto mt-4 px-6 py-2 bg-gradient-to-r from-cyan-400 to-emerald-400 rounded-md shadow-md text-sm font-bold text-white">
+            <button class="boton-portafolio">
                   Enviar mensaje
             </button>
         </form>

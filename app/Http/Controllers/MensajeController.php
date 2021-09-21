@@ -22,6 +22,6 @@ class MensajeController extends Controller
         //enviar los datos del email
         Mail::to('martiresalbertoorozcogonzalez@gmail.com')->queue(new MensajeMailable($message));
 
-        return back();
+        return back()->with('estado','El mensaje ha sido enviado');
     }
 }

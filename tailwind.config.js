@@ -15,7 +15,9 @@ module.exports = {
                 'emerald':colors.emerald,
                 'indigo':colors.indigo,
                 'violet':colors.violet,
-                'rose':colors.rose
+                'rose':colors.rose,
+                'orange':colors.orange
+
             },
             fontFamily: {
                 sans: ['Nunito', ...defaultTheme.fontFamily.sans],

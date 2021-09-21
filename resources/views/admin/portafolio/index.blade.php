@@ -6,7 +6,12 @@
 
     <h1 class="text-2xl text-center text-black font-bold">Portafolio</h1>
 
+    @if (session('estado'))
+       <div class="bg-indigo-500 text-center text-white font-bold uppercase rounded-md my-3">{{ session('estado') }}</div>        
+    @endif
+
     <a href="{{ route('portafolio.create') }}" class="bg-gradient-to-l from-red-600  hover:bg-indigo-700 p-2 mb-2 rounded" type="submit">Crear Portafolio</a>
+    
 
 <div class="bg-white overflow-hidden shadow-xl sm:rounded-lg">
 
