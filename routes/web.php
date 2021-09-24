@@ -14,6 +14,8 @@ use App\Http\Controllers\FrontController;
 /* Ruta para la pagina de inicio  */
 Route::get('/', [FrontController::class, 'acerca'])->name('front.index');
 
+//Ruta para mostrar portafolio
+Route::get('/portafolio/{portafolio}', [FrontController::class, 'show'])->name('front.show');
 
 // Route::get('/', function () {
 //     return view('inicio');
