@@ -23,3 +23,7 @@
 .boton-portafolio{
     @apply inline-block mt-4 bg-gradient-to-r from-orange-400 to-orange-400 font-bold text-white text-sm px-6 py-2 rounded-md shadow-md
 }
+
+.boton-portafolio-re{
+    @apply inline-block mt-4 bg-gradient-to-r from-red-400 to-red-400 font-bold text-white text-sm px-6 py-2 rounded-md shadow-md
+}

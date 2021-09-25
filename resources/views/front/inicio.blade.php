@@ -10,10 +10,14 @@
 
 <!-- Seccion Acerca de -->
 <section class="flex justify-center items-center min-h-screen">
-    <div class="relative">
-        <div class="bg-card"></div>
-        <div class="relative md:flex space-x-12 z-10 bg-white max-w-4xl p-12 rounded-md shadow-md">
-            @foreach($acerca as $acerca)
+    
+  <div class="relative">
+  
+      <div class="bg-card"></div>
+       
+        <div class="relative md:flex space-x-3 z-10 bg-white max-w-4xl p-12 rounded-md shadow-md">
+       
+          @foreach($acerca as $acerca)
             <div class="flex flex-col space-y-6 justify-between py-4">
                 
                 <div>
@@ -31,7 +35,7 @@
                 </div>
 
             </div>
-            <img src="/storage/{{$acerca->imagen}}" alt="" class="w-80 rounded-full border-6 border-blue-300 shadow-md flex-shrink-0">
+            <img src="/storage/{{$acerca->imagen}}" alt="" class="w-96 rounded-full border-6 border-blue-300 shadow-md flex-shrink-0">
             @endforeach 
         </div>
 
@@ -88,6 +92,7 @@
 
 <!-- Seccion de Portafolio -->
 <section class="pt-20 pb-20 px-8 min-h-screen">
+
    <div class="max-w-5xl mx-auto">
        <div class="text-center">
          <h2 class="text-6xl text-gray-800 font-bold">Portafolio</h2>
@@ -101,9 +106,9 @@
               <img src="/storage/{{$port->imagen}}" class="bg-blue-300 h-50 w-full object-cover p-3" alt="">
               <div class="p-8">
                 <h4 class="font-bold text-2xl text-gray-800">{{ $port->titulo }}</h4>
-                <p class="pt-3">
+                {{-- <p class="pt-3">
                   {!! $port->descripcion !!}
-                </p>
+                </p> --}}
                 <a href="{{ route('front.show',['portafolio' => $port->id]) }}" class="boton-portafolio">
                   Ver mas
                 </a>
@@ -116,9 +121,9 @@
               <img src="/storage/{{$port->imagen}}" class="bg-blue-300 p-3 h-50 w-full object-cover" alt="">
               <div class="p-8">
                 <h4 class="font-bold text-2xl text-gray-800">{{ $port->titulo}}</h4>
-                <p class="pt-3">
+                {{-- <p class="pt-3">
                   {!! $port->descripcion !!}
-                </p>
+                </p> --}}
                 <a href="{{ route('front.show',['portafolio' => $port->id]) }}" class="boton-portafolio">
                   Ver mas
                 </a>
@@ -131,9 +136,9 @@
             <img src="/storage/{{$port->imagen}}" class="bg-blue-300 p-3 h-50 w-full object-cover" alt="">
             <div class="p-8">
               <h4 class="font-bold text-2xl text-gray-800">{{ $port->titulo}}</h4>
-              <p class="pt-3">
+              {{-- <p class="pt-3">
                 {!! $port->descripcion !!}
-              </p>
+              </p> --}}
               <a href="{{ route('front.show',['portafolio' => $port->id]) }}" class="boton-portafolio">
                 Ver mas
               </a>
@@ -147,9 +152,9 @@
             <img src="/storage/{{$port->imagen}}" class="bg-blue-300 h-50 w-full object-cover p-3" alt="">
             <div class="p-8">
               <h4 class="font-bold text-2xl text-gray-800">{{ $port->titulo }}</h4>
-              <p class="pt-3">
+              {{-- <p class="pt-3">
                 {!! $port->descripcion !!}
-              </p>
+              </p> --}}
               <a href="{{ route('front.show',['portafolio' => $port->id]) }}" class="boton-portafolio">
                 Ver mas
               </a>
@@ -161,7 +166,8 @@
           @endforeach
 
        </div> 
-    </div>
+   </div>
+   
 </section> 
 
 <!-- Seccion de contacto -->
