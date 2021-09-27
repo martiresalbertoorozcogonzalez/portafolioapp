@@ -35,7 +35,7 @@
                 </div>
 
             </div>
-            <img src="/storage/{{$acerca->imagen}}" alt="" class="w-96 rounded-full border-6 border-blue-300 shadow-md flex-shrink-0">
+            <img src="/storage/{{$acerca->imagen}}" alt="" class="w-64 h-64 rounded-full border-6 border-blue-300 shadow-md flex-shrink-0">
             @endforeach 
         </div>
 
@@ -67,7 +67,7 @@
 </section>  
 
 <!-- Seccion para certificaciones -->
-<section class="bg-gray-50 pt-20 pb-20 px-8">
+<section class="pt-20 pb-20 px-8">
   <div class="max-w-5xl mx-auto">
       <div class="text-center">
         <h2 class="text-5xl text-gray-800 font-bold">Certificaciones</h2>
@@ -91,7 +91,7 @@
 </section> 
 
 <!-- Seccion de Portafolio -->
-<section class="pt-20 pb-20 px-8 min-h-screen">
+<section class="bg-gray-50 pt-20 pb-20 px-8 min-h-screen">
 
    <div class="max-w-5xl mx-auto">
        <div class="text-center">
@@ -171,7 +171,7 @@
 </section> 
 
 <!-- Seccion de contacto -->
-<section class="pt-20 pb-36 px-8 bg-gray-50">
+<section class="pt-20 pb-36 px-8">
   <div class="max-w-6xl mx-auto">
     <div class="text-center">
         <h1 class="text-5xl font-bold text-gray-800">Contactame</h1>
