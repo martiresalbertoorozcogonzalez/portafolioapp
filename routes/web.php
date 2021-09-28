@@ -7,22 +7,12 @@ use App\Http\Controllers\HabilidadController;
 use App\Http\Controllers\AcercaController;
 use App\Http\Controllers\CertificacionController;
 use App\Http\Controllers\MensajeController;
-use App\Http\Controllers\WelcomeController;
 use App\Http\Controllers\FrontController;
 
 
 /* Ruta para la pagina de inicio  */
 Route::get('/', [FrontController::class, 'acerca'])->name('front.index');
 
-//Ruta para mostrar portafolio
-Route::get('/portafolio/{portafolio}', [FrontController::class, 'show'])->name('front.show');
-
-// Route::get('/', function () {
-//     return view('inicio');
-// })->name('home');
-
-/* Ruta para la pagina de inicio de Mariobros */
-Route::get('/playmario', [WelcomeController::class, '__invoke'])->name('welcome');;
 
 /**Ruta oara el home de admin */
 
@@ -60,33 +50,21 @@ Route::put('/acerca/{acerca}', [AcercaController::class, 'update'])->name('acerc
 
 Route::delete('/acerca/{acerca}', [AcercaController::class, 'destroy'])->name('acerca.destroy');
 
+/**Rutas para el portafolio */
+Route::resource('portafolio', PortafolioController::class);
+
+//Ruta para mostrar portafolio
+Route::get('/portafolio/{portafolio}', [FrontController::class, 'show'])->name('front.show');
+
+
 /**Rutas para Certificaciones*/
 
-Route::get('/certificacion', [CertificacionController::class, 'index'])->name('certificacion.index');
+Route::resource('certificacion', CertificacionController::class);
 
-Route::get('/certificacion/create', [CertificacionController::class, 'create'])->name('certificacion.create');
 
-Route::post('/certificacion', [CertificacionController::class, 'store'])->name('certificacion.store');
+//Ruta para mostrar portafolio
+Route::get('/certificacion/{certificacion}', [FrontController::class, 'vercertificacion'])->name('front.vercertificacion');
 
-Route::get('/certificacion/{certificacion}/edit', [CertificacionController::class, 'edit'])->name('certificacion.edit');
-
-Route::put('/certificacion/{certificacion}', [CertificacionController::class, 'update'])->name('certificacion.update');
-
-Route::delete('/certificacion/{certificacion}', [CertificacionController::class, 'destroy'])->name('certificacion.destroy');
-
-/**Rutas para el portafolio */
-
-Route::get('/portafolio', [PortafolioController::class, 'index'])->name('portafolio.index');
-
-Route::get('/portafolio/create', [PortafolioController::class, 'create'])->name('portafolio.create');
-
-Route::post('/portafolio', [PortafolioController::class, 'store'])->name('portafolio.store');
-
-Route::get('/portafolio/{portafolio}/edit', [PortafolioController::class, 'edit'])->name('portafolio.edit');
-
-Route::put('/portafolio/{portafolio}', [PortafolioController::class, 'update'])->name('portafolio.update');
-
-Route::delete('/portafolio/{portafolio}', [PortafolioController::class, 'destroy'])->name('portafolio.destroy');
 
 // Mensajes
 
@@ -95,3 +73,13 @@ Route::post('mensaje',[MensajeController::class, 'store'])->name('mensaje');
       /** Requerimiento de auth */
 
 require __DIR__.'/auth.php';
+
+
+
+// Route::get('/', function () {
+//     return view('inicio');
+// })->name('home');
+
+/* Ruta para la pagina de inicio de Mariobros */
+// Route::get('/playmario', [WelcomeController::class, '__invoke'])->name('welcome');;
+

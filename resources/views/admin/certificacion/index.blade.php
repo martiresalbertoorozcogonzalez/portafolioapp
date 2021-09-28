@@ -6,7 +6,7 @@
 
     <h1 class="text-2xl text-center text-black font-bold">Certificaciones</h1>
 
-      <a href="{{ route('certificacion.create') }}" class="bg-gradient-to-l from-red-600  hover:bg-indigo-700 p-2 mb-2 rounded" type="submit">Crear Certificacion</a>
+    <a href="{{ route('certificacion.create') }}" class="bg-gradient-to-l from-red-600  hover:bg-indigo-700 p-2 mb-2 rounded" type="submit">Crear Certificacion</a>
 
 <div class="bg-white overflow-hidden shadow-xl sm:rounded-lg">
 

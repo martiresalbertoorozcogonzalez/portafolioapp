@@ -35,7 +35,7 @@
                 </div>
 
             </div>
-            <img src="/storage/{{$acerca->imagen}}" alt="" class="w-64 h-64 rounded-full border-6 border-blue-300 shadow-md flex-shrink-0">
+            <img src="/storage/{{$acerca->imagen}}" alt="" class="w-72 h-72 rounded-full border-6 border-blue-300 shadow-md flex-shrink-0">
             @endforeach 
         </div>
 
@@ -56,7 +56,7 @@
       <div class="relative">
         <div class="bg-card"></div>     
         <div class="relative bg-white p-12 rounded-md shadow-md">
-         <img src="/storage/{{$habilidad->imagen}}" class="w-8 h-8" alt="">   
+         <img src="/storage/{{$habilidad->imagen}}" class="w-24 h-24" alt="">   
          <h3 class="mt-3 text-2xl font-bold text-gray-800">{{ $habilidad->nombre }}</h3>
          <p class="mt-4">{!! $habilidad->descripcion !!}</p>
 
@@ -71,18 +71,21 @@
   <div class="max-w-5xl mx-auto">
       <div class="text-center">
         <h2 class="text-5xl text-gray-800 font-bold">Certificaciones</h2>
-        <p class="pt-2">Lorem ipsum dolor sit amet consectetur.</p>
+        <p class="pt-2">hooaLorem ipsum dolor sit amet consectetur.</p>
       </div> 
    </div>
    <div class="mt-16 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-16">
 
    @foreach($certificacion as $certificacion)
      <div class="relative">
-       <div class="bg-card"></div>     
-       <div class="relative bg-white p-12 rounded-md shadow-md">
-        <img src="/storage/{{$certificacion->imagen}}" class="w-8 h-8" alt="">   
+       <div class="bg-card text-center"></div>     
+       <div class="relative bg-white p-12 rounded-md shadow-md ">
+        <img src="/storage/{{$certificacion->imagen}}" class="w-60 h-60" alt="">   
         <h3 class="mt-3 text-2xl font-bold text-gray-800">{{ $certificacion->nombre }}</h3>
-        <p class="mt-4">{!! $certificacion->descripcion !!}</p>
+        {{-- <p class="mt-4">{!! $certificacion->descripcion !!}</p> --}}
+        <a href="{{ route('front.vercertificacion',['certificacion' => $certificacion->id]) }}" class="boton-portafolio">
+          Ver mas
+        </a>
        </div>
      </div>
    @endforeach

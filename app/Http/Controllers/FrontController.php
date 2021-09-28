@@ -43,17 +43,18 @@ class FrontController extends Controller
     public function show(Portafolio $portafolio)
     {
 
-       return view('front.show')->with('portafolio',$portafolio);
+        return view('front.show')->with('portafolio',$portafolio);
 
     }
 
 
+    // Ruta para mostrar la certificacion
+    public function vercertificacion(Certificacion $certificacion)
+    {
 
+       return view('front.showcert')->with('certificacion',$certificacion);
 
-
-
-
-
+    }
 
 
 
