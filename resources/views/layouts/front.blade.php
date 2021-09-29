@@ -19,7 +19,6 @@
     </head>
 <body class="antialiased text-orange-600">
     
-@include('front.partials.imagen')
 
 @yield('content')
 

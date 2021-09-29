@@ -10,7 +10,7 @@
 </div>
 
 <!-- Seccion Acerca de -->
-<section class="flex justify-center items-center min-h-screen">
+<section class="flex justify-center items-center min-h-screen bg-gray-900">
     
     <div class="relative text-center">
     

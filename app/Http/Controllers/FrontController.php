@@ -22,8 +22,10 @@ class FrontController extends Controller
         $portafolio = Portafolio::all();
 
         //Cetificaciones
-        $certificacions = Certificacion::paginate(6);
+        // $certificacions = Certificacion::all()->take(6);
+        $certificacions = Certificacion::latest()->take(6)->get();
 
+        // dd($certificacions);
 
         return view('front.inicio')->with('acerca', $acerca)
                              ->with('certificacions', $certificacions)
@@ -43,10 +45,17 @@ class FrontController extends Controller
     // Ruta para mostrar la certificacion
     public function vercertificacion(Certificacion $certificacion)
     {
-
-       return view('front.showcert')->with('certificacion',$certificacion);
-
+        
+        return view('front.showcert')->with('certificacion',$certificacion);
+        
     }
-
-
+    
+    
+    //Ruta para mostrar el resto de certificaciones
+    public function certificaciones(Certificacion $certificacion)
+    {
+        $certificacions = Certificacion::first()->take(7)->paginate(6);
+        // $certificacions = Certificacion::orderBy('id')->paginate(6);
+        return view('front.showcertificaciones')->with('certificacions', $certificacions);
+    }
 }

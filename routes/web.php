@@ -39,28 +39,23 @@ Route::delete('/acerca/{acerca}', [AcercaController::class, 'destroy'])->name('a
 /**Rutas para el portafolio */
 Route::resource('portafolio', PortafolioController::class);
 
-//Ruta para mostrar portafolio
+//Ruta para mostrar informacion de un portafolio
 Route::get('/portafolio/{portafolio}', [FrontController::class, 'show'])->name('front.show');
 
-
 /**Rutas para Certificaciones*/
-
 Route::resource('certificacion', CertificacionController::class);
 
-
-//Ruta para mostrar portafolio
+//Ruta para mostrar una sola certificacion
 Route::get('/certificacion/{certificacion}', [FrontController::class, 'vercertificacion'])->name('front.vercertificacion');
 
+//Ruta para mostrar el resto de certificaciones
+Route::get('/certificaciones', [FrontController::class, 'certificaciones'])->name('certificaciones');
 
 // Mensajes
-
 Route::post('mensaje',[MensajeController::class, 'store'])->name('mensaje');
 
-      /** Requerimiento de auth */
-
+/** Requerimiento de auth */
 require __DIR__.'/auth.php';
-
-
 
 // Route::get('/', function () {
 //     return view('inicio');
