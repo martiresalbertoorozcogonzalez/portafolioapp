@@ -22,14 +22,14 @@
                 
                 <div>
                     <p class="text-lg">Hola yo soy</p>
-                    <h1 class="text-5xl font-bold text-gray-800">{{ $acerca->nombre }}</h1>
+                    <h1 class="text-4xl font-bold text-gray-800">{{ $acerca->nombre }}</h1>
                 </div>
                 <p class="text-lg leading-relaxed">
                     {!! $acerca->descripcion !!}
                 </p>
 
 
-                <div class="inline-flex spacex4 text-5xl text-gray-600">
+                <div class="inline-flex spacex4 text-4xl text-gray-600">
                 <ion-icon name="logo-github"></ion-icon>
                 <ion-icon name="logo-linkedin"></ion-icon>
                 </div>
@@ -42,30 +42,6 @@
     </div>
 </section>
 
-<!-- Seccion de servicios -->
-<section class="bg-gray-50 pt-20 pb-20 px-8">
-   <div class="max-w-5xl mx-auto">
-       <div class="text-center">
-         <h2 class="text-5xl text-gray-800 font-bold">Conocimientos</h2>
-         <p class="pt-2">Lorem ipsum dolor sit amet consectetur.</p>
-       </div> 
-    </div>
-    <div class="mt-16 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-16">
-
-    @foreach($habilidad as $habilidad)
-      <div class="relative">
-        <div class="bg-card"></div>     
-        <div class="relative bg-white p-12 rounded-md shadow-md">
-         <img src="/storage/{{$habilidad->imagen}}" class="w-24 h-24" alt="">   
-         <h3 class="mt-3 text-2xl font-bold text-gray-800">{{ $habilidad->nombre }}</h3>
-         <p class="mt-4">{!! $habilidad->descripcion !!}</p>
-
-        </div>
-      </div>
-    @endforeach  
-    </div>
-</section>  
-
 <!-- Seccion para certificaciones -->
 <section class="pt-20 pb-20 px-8">
   <div class="max-w-5xl mx-auto">
@@ -76,21 +52,26 @@
    </div>
    <div class="mt-16 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-16">
 
-   @foreach($certificacion as $certificacion)
+   @foreach($certificacions as $certificacion)
      <div class="relative">
-       <div class="bg-card text-center"></div>     
-       <div class="relative bg-white p-12 rounded-md shadow-md ">
-        <img src="/storage/{{$certificacion->imagen}}" class="w-60 h-60" alt="">   
-        <h3 class="mt-3 text-2xl font-bold text-gray-800">{{ $certificacion->nombre }}</h3>
+       <div class="bg-card"></div>     
+       <div class="relative bg-white p-12 rounded-md shadow-md flex flex-col items-center">
+        <img src="/storage/{{$certificacion->imagen}}" class="w-52 h-36" alt="">   
+        <h3 class="mt-3 text-xl font-bold text-gray-800">{{ $certificacion->nombre }}</h3>
         {{-- <p class="mt-4">{!! $certificacion->descripcion !!}</p> --}}
-        <a href="{{ route('front.vercertificacion',['certificacion' => $certificacion->id]) }}" class="boton-portafolio">
-          Ver mas
+        <a href="{{ route('front.vercertificacion',['certificacion' => $certificacion->id]) }}" class="boton-certificaciones">
+          Ver Info
         </a>
        </div>
      </div>
    @endforeach
-     
-   </div>
+  </div>
+
+  <div class="mt-12 flex justify-center">
+    <a href="#" class="boton-vercertificaciones">
+      Ver certificaciones
+    </a>
+  </div>
 </section> 
 
 <!-- Seccion de Portafolio -->

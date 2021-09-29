@@ -25,7 +25,7 @@
     </thead>
 
     <tbody class="divide-y divide-gray-200">
-    @foreach ($certificacion as $certificacion)
+    @foreach ($certificacions as $certificacion)
       <tr class="text-center bg-white">
         <td class="text-center px-6 py-3">{{ $certificacion->id }}</td>
         <td class="text-center px-6 py-3">{{ $certificacion->nombre }}</td>
@@ -45,13 +45,19 @@
         </td>
       </tr>
       @endforeach
+
     </tbody>
 
   </table>
+  
+  <div class="flex justify-around space-x-6 py-8 px-6">
+    {{ $certificacions->links() }}
+  </div>
 
 </div>
 
 </div>
+
 
 @endsection
 

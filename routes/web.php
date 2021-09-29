@@ -22,20 +22,6 @@ Route::get('/dashboard', function () {
 })->middleware(['auth'])->name('dashboard');
 
 
-/**Rutas para las habilidades */
-
-Route::get('/habilidad', [HabilidadController::class, 'index'])->name('habilidad.index');
-
-Route::get('/habilidad/create', [HabilidadController::class, 'create'])->name('habilidad.create');
-
-Route::post('/habilidad', [HabilidadController::class, 'store'])->name('habilidad.store');
-
-Route::get('/habilidad/{habilidad}/edit', [HabilidadController::class, 'edit'])->name('habilidad.edit');
-
-Route::put('/habilidad/{habilidad}', [HabilidadController::class, 'update'])->name('habilidad.update');
-
-Route::delete('/habilidad/{habilidad}', [HabilidadController::class, 'destroy'])->name('habilidad.destroy');
-
 /**Rutas para Acerca de mi */
 
 Route::get('/acerca', [AcercaController::class, 'index'])->name('acerca.index');

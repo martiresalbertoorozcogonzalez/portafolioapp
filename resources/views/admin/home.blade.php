@@ -18,7 +18,7 @@
 
                 <div class="grid grid-rows-4 grid-cols-1 gap-4 md:grid-rows-2 md:grid-cols-2">
 
-                    <a href="{{ route('habilidad.index') }}"
+                    {{-- <a href="{{ url('habilidad/index') }}"
                          class="rounded-2x backdrop-filter backdrop-blur-lg bg-opacity-20  bg-gradient-to-r from-indigo-400 p-4 flex flex-col relative undefined text-center hover:bg-indigo-300">
                          <div class="absolute right-2">
 
@@ -30,7 +30,7 @@
                         <div class="font-normal">Aca puedes encontrar todas los trabajos hechos
                             a lo largo de mi trayectoria como progrmador.
                         </div>
-                    </a>
+                    </a> --}}
 
                     <a href="{{ route('acerca.index') }}"
                          class="rounded-2x backdrop-filter backdrop-blur-lg bg-opacity-20  bg-gradient-to-r from-indigo-400 p-4 flex flex-col relative undefined text-center hover:bg-indigo-300">

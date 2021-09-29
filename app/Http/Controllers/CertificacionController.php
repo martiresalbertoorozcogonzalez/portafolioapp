@@ -23,12 +23,12 @@ class CertificacionController extends Controller
         $usuario = auth()->user();
 
         //Habilidades con paginacion
-        $certificacion = Certificacion::all();
+        $certificacions = Certificacion::paginate(5);
 
         // dd($portafolio);
 
          return view('admin.certificacion.index')
-               ->with('certificacion',$certificacion)
+               ->with('certificacions',$certificacions)
                ->with('usuario',$usuario);
 
     }

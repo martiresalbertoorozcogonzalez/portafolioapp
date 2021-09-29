@@ -17,24 +17,16 @@ class FrontController extends Controller
     {
         //Acerca de
         $acerca = Acerca::all();
-
-        //Habilidades
-        $habilidad = Habilidad::all();
-        
-        
+    
         //Portafolio
         $portafolio = Portafolio::all();
 
-        
-        
         //Cetificaciones
-        $certificacion = Certificacion::all();
+        $certificacions = Certificacion::paginate(6);
 
-        // dd($portafolio);
 
         return view('front.inicio')->with('acerca', $acerca)
-                             ->with('habilidad', $habilidad)
-                             ->with('certificacion', $certificacion)
+                             ->with('certificacions', $certificacions)
                              ->with('portafolio', $portafolio);
     }
 
@@ -55,7 +47,6 @@ class FrontController extends Controller
        return view('front.showcert')->with('certificacion',$certificacion);
 
     }
-
 
 
 }
