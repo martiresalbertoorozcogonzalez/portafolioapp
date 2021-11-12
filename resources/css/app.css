@@ -39,3 +39,11 @@
 .boton-contacto{
     @apply inline-block mt-4 bg-gradient-to-r from-blue-400 to-red-400 font-bold text-white text-sm px-3 py-2 rounded-md shadow-md
 }
+
+.boton-iniciar-secion{
+    @apply text-white border border-white py-2.5 px-5 rounded-md hover:bg-white hover:text-gray-800 transition duration-500 ease-in-out
+}
+
+.boton-registrate{
+    @apply text-white bg-blue-500 border border-blue-500 hover:bg-blue-600 hover:border-blue-600 py-2.5 px-5 rounded-md transition duration-500 ease-in-out
+}

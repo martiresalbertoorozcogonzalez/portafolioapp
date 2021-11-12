@@ -17,11 +17,13 @@
         @yield('estilos')
         
     </head>
-<body class="antialiased text-orange-600">
-    
+<body>
+   
+   @include('front.partials.nav') 
 
-@yield('content')
+   @yield('content')
 
+   
 </body>
 </html>
 
