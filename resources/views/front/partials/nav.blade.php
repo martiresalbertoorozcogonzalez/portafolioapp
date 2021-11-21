@@ -14,13 +14,13 @@
      
       <div id="menu" class="lg:flex hidden flex-grow justify-between absolute lg:relative lg:top-0 top-20 left-0 bg-gray-800 w-full lg:w-auto items-center py-14 lg:py-0 px-8 sm:px-24 lg:px-0">
         <div class="flex flex-col lg:flex-row mb-8 lg:mb-0">
-            <a href="" class="text-white lg:mr-7 mb-8 lg:mb-0">Inicio</a>
+            <a href="{{ url('/') }}" class="text-white lg:mr-7 mb-8 lg:mb-0">Inicio</a>
             <a href="" class="text-white lg:mr-7 mb-8 lg:mb-0">Portafolio</a>
             <a href="" class="text-white">Contacto</a>
         </div>
         <div class="flex flex-col lg:flex-row text-center">
-            <a href="#" class="boton-iniciar-secion lg:mr-4 mb-8 lg:mb-0">Iniciar secion</a>
-            <a href="#" class="boton-registrate">Registrate</a>
+            <a href="{{ url('login') }}" class="boton-iniciar-secion lg:mr-4 mb-8 lg:mb-0">Iniciar secion</a>
+            <a href="{{ url('register') }}" class="boton-registrate">Registrate</a>
         </div>
      </div>
     

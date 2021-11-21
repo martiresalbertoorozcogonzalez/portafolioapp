@@ -9,10 +9,9 @@ use App\Http\Controllers\CertificacionController;
 use App\Http\Controllers\MensajeController;
 use App\Http\Controllers\FrontController;
 
-
 /* Ruta para la pagina de inicio  */
-Route::get('/', [FrontController::class, 'acerca'])->name('front.index');
 
+Route::get('/', [FrontController::class, 'acerca'])->name('front.index');
 
 /**Ruta oara el home de admin */
 
@@ -20,7 +19,6 @@ Route::get('/dashboard', function () {
     $categorias = CategoriaPortafolio::all(['id','nombre']);
     return view('admin.home')->with('categorias',$categorias);
 })->middleware(['auth'])->name('dashboard');
-
 
 /**Rutas para Acerca de mi */
 

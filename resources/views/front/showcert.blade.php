@@ -3,20 +3,16 @@
 
 @section('content')
 
-<div class="absolute w-full min-h-screen">
-    <div class="absolute top-0 w-full h-1/2 bg-cover bg-bottom" 
-         style="background-image: url('../img/background.jpg')">
-    </div>
-</div>
+
 
 <!-- Seccion Acerca de -->
-<section class="flex justify-center items-center min-h-screen bg-gray-900">
+<section class="flex justify-center items-center min-h-screen bg-white">
     
     <div class="relative text-center">
     
           <div class="bg-card"></div>
          
-          <div class="relative md:flex space-x-3 z-10 bg-white max-w-4xl p-12 rounded-md shadow-md">
+          <div class="relative md:flex space-x-3 z-10 bg-gray-100 max-w-4xl p-12 rounded-md shadow-md">
          
             <img src="/storage/{{$certificacion->imagen}}" alt="" class="w-96 rounded-md flex-shrink-0">
 
@@ -32,11 +28,20 @@
                   
                   <div class="inline-block">
                   
-                    <a href="{{ url('/') }}" class="inline-block mt-4 bg-gradient-to-r from-red-400 to-blue-400 hover:text-orange-800 font-bold text-white text-sm text-center px-6 py-2 rounded-md shadow-md">
+                    <a href="{{ url('/') }}" class="inline-block mt-4 bg-gradient-to-r from-red-400 to-red-400 hover:text-orange-800 font-bold text-white text-sm text-center px-6 py-2 rounded-md shadow-md">
                         Regresar
                     </a>
+                    <a href="" class="inline-block mt-4 bg-gradient-to-r from-blue-400 to-blue-400 hover:text-orange-800 font-bold text-white text-sm text-center px-6 py-2 rounded-md shadow-md">
+                        Ver pagina
+                    </a>   
+                   
+                    <a href="" class="inline-block mt-4 bg-gradient-to-r from-orange-400 to-orange-400 hover:text-orange-800 font-bold text-white text-sm text-center px-6 py-2 rounded-md shadow-md">
+                    <ion-icon name="logo-github"></ion-icon>
+                      Github
+                    </a> 
                     
                   </div>
+
 
               </div>
               

@@ -23,12 +23,12 @@ class FrontController extends Controller
 
         //Cetificaciones
         // $certificacions = Certificacion::all()->take(6);
-        $certificacions = Certificacion::latest()->take(6)->get();
+        $certificaciones = Certificacion::latest()->take(6)->get();
 
         // dd($certificacions);
 
         return view('front.inicio')->with('acerca', $acerca)
-                             ->with('certificacions', $certificacions)
+                             ->with('certificaciones', $certificaciones)
                              ->with('portafolio', $portafolio);
     }
 

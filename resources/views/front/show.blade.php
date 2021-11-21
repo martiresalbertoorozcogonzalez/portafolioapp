@@ -3,14 +3,8 @@
 
 @section('content')
 
-<div class="absolute w-full min-h-screen">
-    <div class="absolute top-0 w-full h-1/2 bg-cover bg-bottom" 
-         style="background-image: url('../img/background.jpg')">
-    </div>
-</div>
-
-<!-- Seccion Acerca de -->
-<section class="flex justify-center items-center min-h-screen bg-gray-900">
+<!-- Seccion Mostrar un solo portafolio -->
+<section class="flex justify-center items-center min-h-screen bg-gray-100">
     
     <div class="relative text-center">
     
@@ -43,6 +37,7 @@
                     <ion-icon name="logo-github"></ion-icon>
                       Github
                     </a> 
+                    
                   </div>
 
               </div>
@@ -52,7 +47,7 @@
           
     </div>
 
- </section>
+</section>
 
 
 @endsection
