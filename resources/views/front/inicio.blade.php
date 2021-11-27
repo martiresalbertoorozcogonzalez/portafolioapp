@@ -10,7 +10,7 @@
 
 {{-- Acerca de mi seccion --}}
 
-<section class="bg-gray-100 text-gray-600 body-font">
+<section class="bg-gray-100 text-gray-600 body-font" id="inicio">
   @foreach ($acerca as $item)
       
   <div class="container mx-auto flex px-5 py-24 md:flex-row flex-col items-center">
@@ -36,7 +36,7 @@
 
 {{-- Sertificacodos seccion --}}
 
-<section class="bg-white text-gray-600 body-font">
+<section class="bg-white text-gray-600 body-font" id="certificaciones">
     <div class="container px-5 py-24 mx-auto">
       <div class="flex flex-col">
         <div class="h-1 bg-gray-200 rounded overflow-hidden">
@@ -76,7 +76,7 @@
 
 {{-- Seccion portafolio --}}
 
-<section class="bg-gray-100 text-gray-600 body-font">
+<section class="bg-gray-100 text-gray-600 body-font" id="portafolio">
   <div class="container px-5 py-24 mx-auto">
     <div class="flex flex-col">
       <div class="h-1 bg-gray-200 rounded overflow-hidden">
@@ -114,7 +114,7 @@
 </section>
   
 <!-- Seccion de contacto -->
-<section class="bg-white pt-20 pb-36 px-8">
+<section class="bg-white pt-20 pb-36 px-8" id="contacto">
   <div class="max-w-6xl mx-auto">
     <div class="text-center">
         <h1 class="text-5xl font-bold text-gray-900">Contactame</h1>

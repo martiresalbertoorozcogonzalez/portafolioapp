@@ -24,7 +24,7 @@
                   </p>
                   
                   
-                  <div class="inline-block">
+                  <div class="flex flex-col justify-around md:flex-row">
                   
                     <a href="{{ url('/') }}" class="inline-block mt-4 bg-gradient-to-r from-red-400 to-red-400 hover:text-orange-800 font-bold text-white text-sm text-center px-6 py-2 rounded-md shadow-md">
                         Regresar

@@ -1,8 +1,8 @@
-<nav class="bg-gray-800 py-6 relative">
+<nav class="bg-gray-800 py-6  w-full">
  <div class="container mx-auto flex px-8 lg:px-0">
 
      <div class="flex flex-grow items-center">
-           <img src="img/professional.png" style="width:30px; height:30px;" alt="Logo">
+           <img src="{{ asset('img/professional.png') }}" style="width:30px; height:30px;" alt="Logo">
            
      </div>
 
@@ -14,9 +14,10 @@
      
       <div id="menu" class="lg:flex hidden flex-grow justify-between absolute lg:relative lg:top-0 top-20 left-0 bg-gray-800 w-full lg:w-auto items-center py-14 lg:py-0 px-8 sm:px-24 lg:px-0">
         <div class="flex flex-col lg:flex-row mb-8 lg:mb-0">
-            <a href="{{ url('/') }}" class="text-white lg:mr-7 mb-8 lg:mb-0">Inicio</a>
-            <a href="" class="text-white lg:mr-7 mb-8 lg:mb-0">Portafolio</a>
-            <a href="" class="text-white">Contacto</a>
+            <a href="#inicio" class="text-white lg:mr-7 mb-8 lg:mb-0">Inicio</a>
+            <a href="#certificaciones" class="text-white lg:mr-7 mb-8 lg:mb-0">Certificaciones</a>
+            <a href="#portafolio" class="text-white lg:mr-7 mb-8 lg:mb-0">Portafolio</a>
+            <a href="#contacto" class="text-white">Contacto</a>
         </div>
         <div class="flex flex-col lg:flex-row text-center">
             <a href="{{ url('login') }}" class="boton-iniciar-secion lg:mr-4 mb-8 lg:mb-0">Iniciar secion</a>
