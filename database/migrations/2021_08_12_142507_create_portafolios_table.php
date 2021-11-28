@@ -43,6 +43,7 @@ class CreatePortafoliosTable extends Migration
             $table->id();
             $table->string('nombre');
             $table->string('imagen')->nullable();
+            $table->string('url_certificacion')->nullable();
             $table->text('descripcion')->nullable();
             $table->timestamps();
         });
@@ -51,7 +52,8 @@ class CreatePortafoliosTable extends Migration
             $table->id();
             $table->string('titulo');
             $table->string('imagen')->nullable();
-            $table->string('urlPortafolio')->nullable();
+            $table->string('url_Portafolio')->nullable();
+            $table->string('url_Git')->nullable();
             $table->text('descripcion');
 
             $table->foreignId('user_id')->references('id')->on('users')->comment('El usuario que crea la receta');

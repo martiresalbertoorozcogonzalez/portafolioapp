@@ -70,7 +70,8 @@ class PortafolioController extends Controller
             'titulo' =>  'required|min:6',
             'categoria' => 'required',
             'descripcion' => 'required',
-            'urlPortafolio' =>'required',
+            'url_Portafolio' =>'required',
+            'url_Git' =>'required',
             'imagen' => 'required|image',
         ]);
 
@@ -86,7 +87,8 @@ class PortafolioController extends Controller
             'titulo' => $data['titulo'] ,
             'categoria_id' => $data['categoria'],
             'descripcion' => $data['descripcion'],
-            'urlPortafolio' => $data['urlPortafolio'],
+            'url_Portafolio' => $data['url_Portafolio'],
+            'url_Git' => $data['url_Git'],
             'imagen' => $ruta_imagen,
         ]);
 
@@ -140,13 +142,15 @@ class PortafolioController extends Controller
         'titulo' =>  'required|min:6',
         'categoria' => 'required',
         'descripcion' => 'required',
-        'urlPortafolio' =>'required',
+        'url_Portafolio' =>'required',
+        'url_Git' =>'required',
         ]);
 
 
         //Asiganr los valores
         $portafolio->titulo = $data['titulo'];
-        $portafolio->urlPortafolio = $data['urlPortafolio'];
+        $portafolio->url_Portafolio = $data['url_Portafolio'];
+        $portafolio->url_Git = $data['url_Git'];
         $portafolio->descripcion = $data['descripcion'];
         $portafolio->categoria_id = $data['categoria'];
 

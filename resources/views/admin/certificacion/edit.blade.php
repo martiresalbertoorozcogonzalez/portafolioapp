@@ -38,6 +38,22 @@
                     </div>
 
                     <div class="mb-5">
+
+                        <label for="url_certificacion" class="block text-gray-700 text-sm mb-2">UrlCertificacion</label>
+
+                        <input id="url_certificacion" type="text"
+                            class="p-3 bg-white rounded form-input w-full @error('url_certificacion') border-blue-500 border @enderror"
+                            name="url_certificacion" placeholder="url_certificacion" value="{{ $certificacion->url_certificacion }}">
+                        @error('url_certificacion')
+                        <div class="bg-red-200 border border-red-500 text-red-800 px-4 py-3 rounded relative mt-3 mb-6"
+                            role="alert">
+                            <strong class="font-bold">Error!!</strong>
+                            <span class="block">{{ $message }}</span>
+                        </div>
+                        @enderror
+                    </div>
+
+                    <div class="mb-5">
                         <label for="descripcion" class="block text-gray-700 text-sm mb-2">
                             Descripcion Certifiacin
                         </label>

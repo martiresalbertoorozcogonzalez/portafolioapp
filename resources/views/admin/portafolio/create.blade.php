@@ -38,11 +38,27 @@
 
                     <div class="mb-5">
 
-                        <label for="urlPortafolio" class="block text-gray-700 text-sm mb-2">urlportafolio</label>
+                        <label for="url_portafolio" class="block text-gray-700 text-sm mb-2">urlportafolio</label>
 
-                        <input id="urlPortafolio" type="text"
-                            class="p-3 bg-white rounded form-input w-full @error('urlPortafolio') border-blue-500 border @enderror"
-                            name="urlPortafolio" placeholder="urlPortafolio" value="{{ old('urlPortafolio') }}">
+                        <input id="url_Portafolio" type="text"
+                            class="p-3 bg-white rounded form-input w-full @error('url_Portafolio') border-blue-500 border @enderror"
+                            name="url_Portafolio" placeholder="url_Portafolio" value="{{ old('url_Portafolio') }}">
+                        @error('urlPortafolio')
+                        <div class="bg-red-200 border border-red-500 text-red-800 px-4 py-3 rounded relative mt-3 mb-6"
+                            role="alert">
+                            <strong class="font-bold">Error!!</strong>
+                            <span class="block">{{ $message }}</span>
+                        </div>
+                        @enderror
+                    </div>
+
+                    <div class="mb-5">  
+
+                        <label for="url_Git" class="block text-gray-700 text-sm mb-2">urlportafolio</label>
+
+                        <input id="url_Git" type="text"
+                            class="p-3 bg-white rounded form-input w-full @error('url_Git') border-blue-500 border @enderror"
+                            name="url_Git" placeholder="url_Git" value="{{ old('url_Git') }}">
                         @error('urlPortafolio')
                         <div class="bg-red-200 border border-red-500 text-red-800 px-4 py-3 rounded relative mt-3 mb-6"
                             role="alert">

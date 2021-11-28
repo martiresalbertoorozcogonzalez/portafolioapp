@@ -10,7 +10,7 @@ class Portafolio extends Model
     use HasFactory;
 
     protected $fillable = [
-        'titulo', 'imagen', 'descripcion', 'urlPortafolio', 'categoria_id'
+        'titulo', 'imagen', 'descripcion', 'url_Portafolio', 'url_Git' , 'categoria_id'
     ];
 
     //Obtiene la categoria del portafolio via FK

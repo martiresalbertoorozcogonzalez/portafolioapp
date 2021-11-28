@@ -57,6 +57,7 @@ class CertificacionController extends Controller
        $data = $request->validate([
         'nombre' =>  'required',
         'descripcion' => 'required',
+        'url_certificacion' => 'url',
         'imagen' => 'required|image',
     ]);
 
@@ -71,6 +72,7 @@ class CertificacionController extends Controller
     Certificacion::create([
         'nombre' => $data['nombre'] ,
         'descripcion' => $data['descripcion'],
+        'url_certificacion' => $data['url_certificacion'],
         'imagen' => $ruta_imagen,
     ]);
 
@@ -116,6 +118,7 @@ class CertificacionController extends Controller
          $data = $request->validate([
             'nombre' =>  'required',
             'descripcion' => 'required',
+            'url_certificacion' => 'url',
             'imagen' =>'required|image',
             ]);
 
@@ -123,6 +126,7 @@ class CertificacionController extends Controller
             //Asiganr los valores
             $certificacion->nombre = $data['nombre'];
             $certificacion->descripcion = $data['descripcion'];
+            $certificacion->url_certificacion = $data['url_certificacion'];
 
             // Si el usuario sube un anueva imagen
             if (request('imagen')) {

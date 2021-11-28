@@ -10,6 +10,6 @@ class Certificacion extends Model
     use HasFactory;
 
     protected $fillable = [
-        'nombre', 'imagen', 'descripcion'
+        'nombre', 'imagen', 'descripcion' , 'url_certificacion'
     ];
 }

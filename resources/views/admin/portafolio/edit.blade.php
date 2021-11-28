@@ -40,12 +40,28 @@
 
                     <div class="mb-5">
 
-                        <label for="urlPortafolio" class="block text-gray-700 text-sm mb-2">urlportafolio</label>
+                        <label for="url_Portafolio" class="block text-gray-700 text-sm mb-2">urlportafolio</label>
 
-                        <input id="urlPortafolio" type="text"
-                            class="p-3 bg-white rounded form-input w-full @error('urlPortafolio') border-blue-500 border @enderror"
-                            name="urlPortafolio" placeholder="urlPortafolio" value="{{ $portafolio->urlPortafolio }}">
-                        @error('urlPortafolio')
+                        <input id="url_Portafolio" type="text"
+                            class="p-3 bg-white rounded form-input w-full @error('url_Portafolio') border-blue-500 border @enderror"
+                            name="url_Portafolio" placeholder="url_Portafolio" value="{{ $portafolio->url_Portafolio }}">
+                        @error('url_Portafolio')
+                        <div class="bg-red-200 border border-red-500 text-red-800 px-4 py-3 rounded relative mt-3 mb-6"
+                            role="alert">
+                            <strong class="font-bold">Error!!</strong>
+                            <span class="block">{{ $message }}</span>
+                        </div>
+                        @enderror
+                    </div>
+
+                    <div class="mb-5">
+
+                        <label for="url_Git" class="block text-gray-700 text-sm mb-2">urlportafolio</label>
+
+                        <input id="url_Git" type="text"
+                            class="p-3 bg-white rounded form-input w-full @error('url_Git') border-blue-500 border @enderror"
+                            name="url_Git" placeholder="url_Git" value="{{ $portafolio->url_Git }}">
+                        @error('url_Git')
                         <div class="bg-red-200 border border-red-500 text-red-800 px-4 py-3 rounded relative mt-3 mb-6"
                             role="alert">
                             <strong class="font-bold">Error!!</strong>
@@ -77,7 +93,7 @@
                         </div>
                         @enderror()
                     </div>
-
+{{-- 
                     <div class="mb-5">
                         <label for="habilidad" class="block text-gray-700 text-sm mb-2">
                             Habilidad;
@@ -100,7 +116,7 @@
                             <span class="block">{{$message}}</span>
                         </div>
                         @enderror()
-                    </div>
+                    </div> --}}
 
                     <div class="mb-5">
                         <label for="descripcion" class="block text-gray-700 text-sm mb-2">

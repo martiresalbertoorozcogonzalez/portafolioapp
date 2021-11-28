@@ -19,6 +19,7 @@
         <th class="px-6 py-3 text-lg font-medium text-white">Nombre</th>
         <th class="px-6 py-3 text-lg font-medium text-white">descripcion</th>
         <th class="px-6 py-3 text-lg font-medium text-white">Imagen</th>
+        <th class="px-6 py-3 text-lg font-medium text-white">Cert</th>
         <th class="px-6 py-3 text-lg font-medium text-white">Editar</th>
         <th class="px-6 py-3 text-lg font-medium text-white">Eliminar</th>
     </tr>
@@ -33,6 +34,7 @@
         <td class="text-center px-6 py-3">
             <img src="/storage/{{$certificacion->imagen}}" width="100" height="100">
         </td>
+        <td class="text-center px-6 py-3">{!! $certificacion->url_certificacion !!}</td>
         <td>
             <a href="{{ route('certificacion.edit',['certificacion' => $certificacion->id]) }}" class="bg-gradient-to-l from-indigo-600 hover:bg-red-500 p-4 rounded" type="submit">Editar</a>
         </td>
